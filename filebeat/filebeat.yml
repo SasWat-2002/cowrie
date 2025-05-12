@@ -1,0 +1,11 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /cowrie-logs/log/cowrie/cowrie.json
+    fields:
+      service: cowrie  
+    tags: ["cowrie_json"]         # Add tag for Cowrie
+
+output.logstash:
+  hosts: ["logstash:5044"]    
