@@ -5,7 +5,7 @@ USER root
 # Remove old config (if any) and copy yours
 RUN rm -f /usr/share/filebeat/filebeat.yml
 COPY filebeat.yml /usr/share/filebeat/filebeat.yml
-
+# hello world
 # Set owner and permissions correctly
 RUN chown root:root /usr/share/filebeat/filebeat.yml && chmod 600 /usr/share/filebeat/filebeat.yml
 
